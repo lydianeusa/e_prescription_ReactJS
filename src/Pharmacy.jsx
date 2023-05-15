@@ -1,6 +1,12 @@
+import {Link} from "react-router-dom";
+import Header from "./Header"
+
 const Pharmacy =()=>{
   return(
-    <p>Pharmacy</p>
+    <>
+    <Header/>
+    <Link to="/find-patient/">Trouver un patient</Link>
+    </>
   )
 }
 

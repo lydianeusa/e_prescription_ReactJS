@@ -31,7 +31,7 @@ const DisplayPhysicians = ()=>{
               <p>Email : {physician.email}</p>
   
               {/* <Link to={`/physicians/${physician.id}`}>Voir le médecin</Link> */}
-              {/* <Link to={`/physicians/${physician.id}/update`}>modifier le coworking</Link> */}
+              {/* <Link to={`/physicians/${physician.id}/update`}>modifier le medecin</Link> */}
             </div>
           );
         })}

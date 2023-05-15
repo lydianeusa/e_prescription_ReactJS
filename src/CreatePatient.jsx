@@ -2,7 +2,7 @@ import Header from "./Header";
 
 
 const CreatePatient = ()=>{
-  const handleSubmit=(event)=>{
+  const handleSubmit=(event)=>{alert('patient créé!')
     event.preventDefault();
 
     const first_name = event.target.first_name.value;
@@ -35,6 +35,7 @@ const CreatePatient = ()=>{
   return (
     <div>
     <Header/>
+    <h1>Créer un dossier patient</h1>
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="first_name">Prénom</label>

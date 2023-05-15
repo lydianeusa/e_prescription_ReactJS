@@ -27,9 +27,6 @@ const DisplayPharmacies = ()=>{
             <p>Adresse : {pharmacy.address+" "+pharmacy.zipcode+" "+pharmacy.city}</p>
             <p>Téléphone : {pharmacy.phone_number}</p>
             <p>Email : {pharmacy.email}</p>
-
-            {/* <Link to={`/physicians/${physician.id}`}>Voir le médecin</Link> */}
-            {/* <Link to={`/physicians/${physician.id}/update`}>modifier le coworking</Link> */}
           </div>
         );
       })}

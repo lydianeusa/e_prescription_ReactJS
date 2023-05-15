@@ -4,18 +4,20 @@ import Home from "./Home"
 import Physician from "./Physician"
 import Pharmacy from "./Pharmacy"
 import Prescription from "./Prescription"
+import Patient from "./Patient"
 
 import DisplayPhysicians from "./DisplayPhysicians";
 import DisplayPharmacies from "./DisplayPharmacies";
 
-// import CreatePrescription from "./CreatePrescritpion";
+import CreatePrescription from "./CreatePrescription";
 import CreatePatient from "./CreatePatient";
 
 import UpdatePatient from "./UpdatePatient";
 
-import FindAPatient from "./FindAPatient";
+import SearchPatient from "./SearchPatient";
 import FindAPhysician from "./FindAPhysician";
 import FindAPharmacy from "./FindAPharmacy";
+
 
 
 
@@ -28,13 +30,14 @@ function App() {
                     <Route path="/prescription" element={<Prescription />} />
                     <Route path="/physician" element={<Physician />} />
                     <Route path="/pharmacy" element={<Pharmacy />} />
+                    <Route path="/patient" element={<Patient />}/>
                     <Route path="/physicianslist" element={<DisplayPhysicians />} />
                     <Route path="/pharmacieslist" element={<DisplayPharmacies />} />
-{/* 
-                    // <Route path="/create-prescription" element={<CreatePrescription/>}/> */}
-                    <Route path="/create-patient" element={<CreatePatient/>}/>
+
+                    <Route path="/create-prescription" element={<CreatePrescription />}/>
+                    <Route path="/create-patient" element={<CreatePatient />}/>
                     <Route path="/patient/:id/update" element={<UpdatePatient />} />
-                    <Route path="/find-patient/" element={<FindAPatient />} />
+                    <Route path="find-patient/" element={<SearchPatient />} />
                     <Route path="/find-physician/" element={<FindAPhysician />} />
                     <Route path="/find-pharmacy/" element={<FindAPharmacy/>} />
                 </Routes>

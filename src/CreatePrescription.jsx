@@ -22,8 +22,8 @@ const CreatePrescription = ()=>{
         dosage: dosage,
         frequency: frequency,
         duration: duration,
-        PatientId : PatientId,
         PhysicianId: PhysicianId,
+        PatientId : PatientId,
         PharmacyId: PharmacyId
       })
     })
@@ -40,6 +40,7 @@ const CreatePrescription = ()=>{
   return (
     <div>
     <Header/>
+    <h1>Créer une ordonnance</h1>
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="medicine_name">Medicine Name</label>
@@ -58,6 +59,10 @@ const CreatePrescription = ()=>{
         <input type="text" name="duration"/>
       </div>
       <div>
+        <label htmlFor="PhysicianId">Pour le médecin:</label>
+        <input type="integer" name="PhysicianId"/>
+      </div>
+      <div>
         <label htmlFor="PatientId">Pour le patient:</label>
         <input type="number" name="PatientId"/>
       </div>
@@ -65,11 +70,7 @@ const CreatePrescription = ()=>{
         <label htmlFor="PharmacyId">Pour la pharmacie:</label>
         <input type="number" name="PharmacyId"/>
       </div>
-      <div>
-        <label htmlFor="PhysicianId">Pour le médecin:</label>
-        <input type="number" name="PhysicianId"/>
-      </div>
-      <button type="submit">submit</button>
+      <button type="number">submit</button>
     </form>
     </div>
   )
