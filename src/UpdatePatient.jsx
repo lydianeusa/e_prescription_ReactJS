@@ -18,9 +18,11 @@ const UpdatePatient = () => {
         });
     }, [id]);
 
-    const handleDeleteClick = (patient) => {
+
+
+    const handleDeleteClick = (patient) => { alert('patient supprimé');
       fetch("http://localhost:3001/api/patients/" + patient.id, {
-        method: "DELETE",
+        method: "DELETE" 
       })
         .then(() => {
           navigate(0);
@@ -30,7 +32,7 @@ const UpdatePatient = () => {
         });
     };
   
-    const handleSubmit = (event) => { alert('it works!');
+    const handleSubmit = (event) => { alert('patient modifié');
       event.preventDefault();
   
       const first_name = event.target.first_name.value;
@@ -63,35 +65,37 @@ const UpdatePatient = () => {
 
     return (
         <>
-        <Header />
-        {patient ? (
+          <Header/>
           <>
-            <h1>Mise à jour du patient : {patient.last_name+" "+patient.first_name}</h1>
-            <form onSubmit={handleSubmit}>
-              <div>
-              <label htmlFor="first_name">Prénom</label>
-                <input type="text" name="first_name" defaultValue={patient.first_name} />
-              </div>
-              <div>
-              <label htmlFor="last_name">Nom</label>
-                <input type="text" name="last_name" defaultValue={patient.last_name} />
-              </div>
-              <div>
-              <label htmlFor="birth_date">Date de naissance</label>
-                <input type="date" name="birth_date" defaultValue={patient.birth_date} />
-              </div>
-              <div>
-              <label htmlFor="email">Email</label>
-                <input type="text" name="email" defaultValue={patient.email} />
-              </div>
-  
-              <button type="submit">Mettre à jour les informations du patient</button>
-            </form>
-            <button onClick={() => handleDeleteClick(patient)}>Supprimer les informations du patient</button>
+            {patient ? (
+              <>
+                <h1>Mise à jour du patient : {patient.last_name+" "+patient.first_name}</h1>
+                <form onSubmit={handleSubmit}>
+                  <div>
+                  <label htmlFor="first_name">Prénom</label>
+                    <input type="text" name="first_name" defaultValue={patient.first_name} />
+                  </div>
+                  <div>
+                  <label htmlFor="last_name">Nom</label>
+                    <input type="text" name="last_name" defaultValue={patient.last_name} />
+                  </div>
+                  <div>
+                  <label htmlFor="birth_date">Date de naissance</label>
+                    <input type="date" name="birth_date" defaultValue={patient.birth_date} />
+                  </div>
+                  <div>
+                  <label htmlFor="email">Email</label>
+                    <input type="text" name="email" defaultValue={patient.email} />
+                  </div>
+      
+                  <button type="submit">Mettre à jour les informations du patient</button>
+                </form>
+                <button onClick={() => handleDeleteClick(patient)}>Supprimer les informations du patient</button>
+              </>
+            ) : (
+              <p>Le patient a été supprimé de la base de données.</p>
+            )}
           </>
-        ) : (
-          <p>Le patient a été supprimé de la base de données.</p>
-        )}
       </>
     )
   };

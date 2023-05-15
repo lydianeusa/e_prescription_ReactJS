@@ -17,6 +17,7 @@ import UpdatePatient from "./UpdatePatient";
 import SearchPatient from "./SearchPatient";
 import FindAPhysician from "./FindAPhysician";
 import FindAPharmacy from "./FindAPharmacy";
+import FindAPrescription from "./FindAPrescription";
 
 
 
@@ -40,6 +41,7 @@ function App() {
                     <Route path="find-patient/" element={<SearchPatient />} />
                     <Route path="/find-physician/" element={<FindAPhysician />} />
                     <Route path="/find-pharmacy/" element={<FindAPharmacy/>} />
+                    <Route path="/find-prescription/" element={<FindAPrescription/>} />
                 </Routes>
         </BrowserRouter>
     </div>
