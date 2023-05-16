@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate} from "react-router-dom";
 import Header from "./Header";
 
 const UpdatePatient = () => {
-    const [patient, setPatient] = useState(null);
+
+  const [patient, setPatient]=useState(null)
 
     const { id } = useParams();
 
@@ -20,10 +21,11 @@ const UpdatePatient = () => {
 
 
 
-    const handleDeleteClick = (patient) => { alert('patient supprimé');
-      fetch("http://localhost:3001/api/patients/" + patient.id, {
+    const handleDeleteClick = () => { alert('patient supprimé');
+    fetch(`http://localhost:3001/api/patients/${id}`, {
         method: "DELETE" 
       })
+      
         .then(() => {
           navigate(0);
         })

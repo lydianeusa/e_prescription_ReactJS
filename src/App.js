@@ -13,6 +13,7 @@ import CreatePrescription from "./CreatePrescription";
 import CreatePatient from "./CreatePatient";
 
 import UpdatePatient from "./UpdatePatient";
+import UpdatePrescription from "./UpdatePrescription";
 
 import SearchPatient from "./SearchPatient";
 import FindAPhysician from "./FindAPhysician";
@@ -36,6 +37,7 @@ function App() {
                     <Route path="/pharmacieslist" element={<DisplayPharmacies />} />
 
                     <Route path="/create-prescription" element={<CreatePrescription />}/>
+                    <Route path="/prescription/:id/update" element={<UpdatePrescription />} />
                     <Route path="/create-patient" element={<CreatePatient />}/>
                     <Route path="/patient/:id/update" element={<UpdatePatient />} />
                     <Route path="find-patient/" element={<SearchPatient />} />
