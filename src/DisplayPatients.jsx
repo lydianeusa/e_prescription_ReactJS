@@ -26,11 +26,10 @@ const DisplayPatients = ()=>{
                 <div key={patient.id}>
                     <h2>{patient.first_name +" "+patient.last_name}</h2>
                     <Link to={`/patient/${patient.id}`}>Voir le patient</Link>
-                    <Footer/>
-                </div>
-                
+                </div>    
                 );
             })}
+            <Footer/>
         </>
     )
 
