@@ -1,8 +1,9 @@
+import Footer from "./Footer";
 import Header from "./Header";
 
 
 const CreatePrescription = ()=>{
-  const handleSubmit=(event)=>{
+  const handleSubmit=(event)=>{alert('patient modifié');
     event.preventDefault();
 
     const medicine_name = event.target.medicine_name.value;
@@ -72,6 +73,7 @@ const CreatePrescription = ()=>{
       </div>
       <button type="number">submit</button>
     </form>
+    <Footer/>
     </div>
   )
 }

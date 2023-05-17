@@ -1,15 +1,13 @@
 import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-import { useNavigate} from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const UpdatePatient = () => {
 
   const [patient, setPatient]=useState(null)
 
     const { id } = useParams();
-
-    const navigate = useNavigate();
   
     useEffect(() => {
       fetch(`http://localhost:3001/api/patients/${id}`)
@@ -19,20 +17,6 @@ const UpdatePatient = () => {
         });
     }, [id]);
 
-
-
-    const handleDeleteClick = () => { alert('patient supprimé');
-    fetch(`http://localhost:3001/api/patients/${id}`, {
-        method: "DELETE" 
-      })
-      
-        .then(() => {
-          navigate(0);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
   
     const handleSubmit = (event) => { alert('patient modifié');
       event.preventDefault();
@@ -92,12 +76,12 @@ const UpdatePatient = () => {
       
                   <button type="submit">Mettre à jour les informations du patient</button>
                 </form>
-                <button onClick={() => handleDeleteClick(patient)}>Supprimer les informations du patient</button>
               </>
             ) : (
               <p>Le patient a été supprimé de la base de données.</p>
             )}
           </>
+          <Footer/>
       </>
     )
   };

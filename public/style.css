@@ -1,7 +1,4 @@
-header{
-  height: 200px;
-  background-color: rgb(244, 212, 170);
-}
+
 
 ul{
   display: flex;
@@ -16,4 +13,9 @@ a:link{
 h1{
   font-size: 1.5rem
 }
+
+h2{
+  font-size: 1.2rem
+}
+
 

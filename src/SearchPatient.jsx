@@ -1,21 +1,13 @@
 import Header from "./Header";
 import { useEffect, useState } from "react";
+import {Link} from "react-router-dom";
 
 const SearchPatient = () => {
   const [patient, setPatient] = useState(null);
   const [searchPatient, setSearchPatient] = useState("");
 
   useEffect(() => {
-    let apiUrl = "http://localhost:3001/api/patients";
-    if (searchPatient) {
-      apiUrl += `?search=${encodeURIComponent(searchPatient)}`;
-    }
-
-    fetch(apiUrl, {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
+    fetch(`http://localhost:3001/api/patients?search=${searchPatient}`,{headers:{"Content-Type":"application/json"}})
       .then((response) => response.json())
       .then((data) => {
         if (data.data.length > 0) {
@@ -26,15 +18,15 @@ const SearchPatient = () => {
       });
   }, [searchPatient]);
 
+  
+
   return (
     <>
       <Header />
-      <input
-        type="text"
-        value={searchPatient}
-        onChange={(e) => setSearchPatient(e.target.value)}
+      <input type="text" value={searchPatient} onChange={(e) => setSearchPatient(e.target.value)}
         placeholder="Chercher patient"
       />
+      <button type="submit">Search</button>
       {searchPatient && patient ? (
         <div key={patient.id}>
           <p>{patient.last_name}</p>
@@ -44,6 +36,9 @@ const SearchPatient = () => {
       ) : (
         <p>Pas de patient trouvé</p>
       )}
+
+        <Link to={`/patient/${patient.id}`}>Voir le patient</Link>
+        <Link to={`/patient/${patient.id}/update`}>modifier le patient</Link>
     </>
   );
 };

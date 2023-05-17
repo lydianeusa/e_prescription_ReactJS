@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Footer from "./Footer";
 
 
 const CreatePatient = ()=>{
@@ -55,7 +56,9 @@ const CreatePatient = ()=>{
       </div>
       <button type="submit">submit</button>
     </form>
+    <Footer/>
     </div>
+
   )
 }
 

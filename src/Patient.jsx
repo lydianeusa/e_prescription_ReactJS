@@ -1,14 +1,16 @@
 import {Link} from "react-router-dom";
 import Header from "./Header"
+import Footer from "./Footer";
 
 const Patient= () => {
   return (
     <>
     <Header/>
         <ul>
-          <li><Link to="/find-physician/">Trouver un médecin</Link></li>
-          <li><Link to="/find-pharmacy/">Trouver une pharmacie</Link></li>
+          <li><Link to="/physicianslist/">Liste des médecins</Link></li>
+          <li><Link to="/pharmacieslist">Liste des pharmacies</Link></li>
         </ul>
+    <Footer/>
     </>
   )
 };

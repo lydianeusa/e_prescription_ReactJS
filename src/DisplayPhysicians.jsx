@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 
 
 const DisplayPhysicians = ()=>{
@@ -26,12 +27,12 @@ const DisplayPhysicians = ()=>{
             <div key={physician.id}>
               <h2>{physician.last_name+" "+physician.first_name}</h2>
               <p>Spécialité : {physician.specialty}</p>
-              <p>Adresse : {physician.address+" "+physician.zipcode+" "+physician.city}</p>
+              <p>Adresse : {physician.address+", "+physician.zipcode+" "+physician.city}</p>
               <p>Téléphone : {physician.phone_number}</p>
               <p>Email : {physician.email}</p>
   
               {/* <Link to={`/physicians/${physician.id}`}>Voir le médecin</Link> */}
-              {/* <Link to={`/physicians/${physician.id}/update`}>modifier le medecin</Link> */}
+              <Footer/>
             </div>
           );
         })}

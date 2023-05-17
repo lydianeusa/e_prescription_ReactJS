@@ -2,6 +2,7 @@ import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate} from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const UpdatePrescription = () => {
 
@@ -98,6 +99,7 @@ const UpdatePrescription = () => {
               <p>L'ordonnance a été supprimée de la base de données.</p>
             )}
           </>
+          <Footer/>
       </>
     )
   };
