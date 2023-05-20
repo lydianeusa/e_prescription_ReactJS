@@ -1,22 +1,24 @@
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 
-import Home from "./Home"
-import Physician from "./Physician"
-import Pharmacy from "./Pharmacy"
-import Patient from "./Patient"
+import Home from "./Components/Home"
+import Physician from "./Components/Physician"
+import Pharmacy from "./Components/Pharmacy"
+import Patient from "./Components/Patient"
+import AboutUs from "./Components/AboutUs";
+import Assistance from "./Components/Assistance";
 
-import DisplayPhysicians from "./DisplayPhysicians";
-import DisplayPharmacies from "./DisplayPharmacies";
-import DisplayPatients from "./DisplayPatients";
-import DisplayPrescriptions from "./DisplayPrescriptions";
+import DisplayPhysicians from "./Components/DisplayPhysicians";
+import DisplayPharmacies from "./Components/DisplayPharmacies";
+import DisplayPatients from "./Components/DisplayPatients";
+import DisplayPrescriptions from "./Components/DisplayPrescriptions";
 
-import CreatePrescription from "./CreatePrescription";
-import UpdatePrescription from "./UpdatePrescription";
-import PrescriptionDetail from "./PrescriptionDetail"
+import CreatePrescription from "./Components/CreatePrescription";
+import UpdatePrescription from "./Components/UpdatePrescription";
+import PrescriptionDetail from "./Components/PrescriptionDetail"
 
-import CreatePatient from "./CreatePatient";
-import UpdatePatient from "./UpdatePatient";
-import PatientDetail from "./PatientDetail";
+import CreatePatient from "./Components/CreatePatient";
+import UpdatePatient from "./Components/UpdatePatient";
+import PatientDetail from "./Components/PatientDetail";
 
 
 
@@ -33,6 +35,8 @@ function App() {
                     <Route path="/physician" element={<Physician />} />
                     <Route path="/pharmacy" element={<Pharmacy />} />
                     <Route path="/patient" element={<Patient />}/>
+                    <Route path="/about-us" element={<AboutUs />}/>
+                    <Route path="/assistance" element={<Assistance />}/>
 
                     <Route path="/physicianslist" element={<DisplayPhysicians />} />
                     <Route path="/pharmacieslist" element={<DisplayPharmacies />} />

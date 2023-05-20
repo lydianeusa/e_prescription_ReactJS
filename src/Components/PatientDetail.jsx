@@ -38,10 +38,14 @@ const PatientDetail = () => {
                         <h2>{patient.first_name+" "+patient.last_name}</h2>
                         <p>date de naissance : {patient.birth_date}</p>
                         <p>email : {patient.email}</p>
-                        <Link to={`/patient/${patient.id}/update`}>Modifier le patient</Link>
-                        <Link to={`/prescription/${patient.id}`}>Voir l'ordonnance</Link>
-                        <button onClick={() => handleDeleteClick(patient)}>Supprimer le patient</button>
                     </div>
+                    <div>
+                        <Link to={`/patient/${patient.id}/update`}>Modifier le patient</Link>
+    
+                        <Link to={`/prescription/${patient.id}`}>Voir l'ordonnance</Link>
+                    </div>
+                        <button onClick={() => handleDeleteClick(patient)}>Supprimer le patient</button>
+                    
                 </>
                 ) : (
                 <p>Pas de patient trouvé</p>
