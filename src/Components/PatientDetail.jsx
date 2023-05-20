@@ -31,25 +31,27 @@ const PatientDetail = () => {
         return (
             <div>
                 <Header />
-                {patient ? (
-                <>
-                    <h1>Détail du patient</h1>
-                    <div>
-                        <h2>{patient.first_name+" "+patient.last_name}</h2>
-                        <p>date de naissance : {patient.birth_date}</p>
-                        <p>email : {patient.email}</p>
-                    </div>
-                    <div>
-                        <Link to={`/patient/${patient.id}/update`}>Modifier le patient</Link>
-    
-                        <Link to={`/prescription/${patient.id}`}>Voir l'ordonnance</Link>
-                    </div>
-                        <button onClick={() => handleDeleteClick(patient)}>Supprimer le patient</button>
-                    
-                </>
-                ) : (
-                <p>Pas de patient trouvé</p>
-                )}
+                <main>
+                    {patient ? (
+                    <>
+                        <h1>Détail du patient</h1>
+                        <div>
+                            <h2>{patient.first_name+" "+patient.last_name}</h2>
+                            <p>date de naissance : {patient.birth_date}</p>
+                            <p>email : {patient.email}</p>
+                        </div>
+                        <div>
+                            <Link to={`/patient/${patient.id}/update`}>Modifier le patient</Link>
+        
+                            <Link to={`/prescription/${patient.id}`}>Voir l'ordonnance</Link>
+                        </div>
+                            <button onClick={() => handleDeleteClick(patient)}>Supprimer le patient</button>
+                        
+                    </>
+                    ) : (
+                    <p>Pas de patient trouvé</p>
+                    )}
+                </main>
                 <Footer/>
             </div>
         );

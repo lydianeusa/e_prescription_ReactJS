@@ -6,6 +6,9 @@ import Pharmacy from "./Components/Pharmacy"
 import Patient from "./Components/Patient"
 import AboutUs from "./Components/AboutUs";
 import Assistance from "./Components/Assistance";
+import MobileApp from "./Components/MobileApp";
+import Delivery from "./Components/Delivery";
+import Fees from "./Components/Fees";
 
 import DisplayPhysicians from "./Components/DisplayPhysicians";
 import DisplayPharmacies from "./Components/DisplayPharmacies";
@@ -37,6 +40,9 @@ function App() {
                     <Route path="/patient" element={<Patient />}/>
                     <Route path="/about-us" element={<AboutUs />}/>
                     <Route path="/assistance" element={<Assistance />}/>
+                    <Route path="/mobile" element={<MobileApp />}/>
+                    <Route path="/delivery" element={<Delivery/>}/>
+                    <Route path="/fees" element={<Fees/>}/>
 
                     <Route path="/physicianslist" element={<DisplayPhysicians />} />
                     <Route path="/pharmacieslist" element={<DisplayPharmacies />} />

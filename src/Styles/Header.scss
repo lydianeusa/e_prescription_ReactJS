@@ -1,9 +1,10 @@
-
+@import "../Variables/variables";
 
 header {
     text-align: center;
-    background-color: #0b283d;;
+    background-color: $darkBlue;
 }
+
 
 .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 1.2rem;

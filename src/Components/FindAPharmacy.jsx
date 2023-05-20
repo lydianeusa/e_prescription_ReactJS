@@ -8,7 +8,7 @@ const FindAPharmacy = () => {
     <>
         <Header />
   
-          <>
+        <main>
             <h1>Trouver une pharmacie :</h1>
             <form onSubmit={handleSubmit}>
               <div>
@@ -38,7 +38,7 @@ const FindAPharmacy = () => {
   
               <button type="submit">Trouver la pharmacie</button>
             </form>
-          </>
+            </main>
           </>
   )
 };

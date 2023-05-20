@@ -14,32 +14,45 @@
 /* CUSTOM HTML ELEMENTS */
 body {
   font-family: "Lato-Regular";
-  color: #112e3e;
+  color: #0e3958;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  padding-top: 40px;
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding: 20px;
 }
 
-/* COMPONENTS */
-.btn.btn-dark {
-  margin: 20px;
-  padding: 20px 40px;
+h3 {
+  font-size: 1.2rem;
 }
 
+main {
+  text-align: center;
+}
+
+section {
+  padding-top: 50px;
+}
+
+/* COMPONENTS */
 a {
   text-decoration: none;
   color: #051720;
-  font-size: 1.3;
+  font-size: 1.3rem;
 }
 
 ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
+}
+
+main li {
+  font-size: 1.3rem;
+  padding-top: 40px;
 }/*# sourceMappingURL=index.css.map */

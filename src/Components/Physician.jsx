@@ -6,7 +6,7 @@ const Physician =()=>{
   return(
     <>
       <Header />
-      <>
+      <main>
         <ul>
           <li><Link to="/pharmacieslist/">Liste des pharmacie</Link></li>
           <li><Link to="/patientslist/">Liste des patients</Link></li>
@@ -14,7 +14,7 @@ const Physician =()=>{
           <li><Link to="/prescriptionslist">Liste des ordonnances</Link></li>
           <li><Link to="/create-prescription">Créer une ordonnance</Link></li>
         </ul>
-      </>
+      </main>
       <Footer/>
     </>
   )

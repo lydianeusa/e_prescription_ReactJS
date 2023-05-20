@@ -7,7 +7,7 @@ const FindAPhysician = () => {
     return (
         <>
             <Header />
-            <>
+            <main>
                 <h1>Trouver un médecin :</h1>
                 <form onSubmit={handleSubmit}>
                 <div>
@@ -41,7 +41,7 @@ const FindAPhysician = () => {
     
                 <input type="submit" value="Trouver le médecin" />
                 </form>
-            </>
+                </main>
         </>
     )
 }

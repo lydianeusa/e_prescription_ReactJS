@@ -41,38 +41,40 @@ const CreatePrescription = ()=>{
   return (
     <div>
     <Header/>
-    <h1>Créer une ordonnance</h1>
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="medicine_name">Medicine Name</label>
-        <input type="text" name="medicine_name"/>
-      </div>
-      <div>
-        <label htmlFor="dosage">Dosage</label>
-        <input type="text" name="dosage"/>
-      </div>
-      <div>
-        <label htmlFor="frequency">Frequency</label>
-        <input type="text" name="frequency"/>
-      </div>
-      <div>
-        <label htmlFor="duration">Duration</label>
-        <input type="text" name="duration"/>
-      </div>
-      <div>
-        <label htmlFor="PhysicianId">Pour le médecin:</label>
-        <input type="integer" name="PhysicianId"/>
-      </div>
-      <div>
-        <label htmlFor="PatientId">Pour le patient:</label>
-        <input type="number" name="PatientId"/>
-      </div>
-      <div>
-        <label htmlFor="PharmacyId">Pour la pharmacie:</label>
-        <input type="number" name="PharmacyId"/>
-      </div>
-      <button type="number">submit</button>
-    </form>
+    <main>
+      <h1>Créer une ordonnance</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="medicine_name">Medicine Name</label>
+          <input type="text" name="medicine_name"/>
+        </div>
+        <div>
+          <label htmlFor="dosage">Dosage</label>
+          <input type="text" name="dosage"/>
+        </div>
+        <div>
+          <label htmlFor="frequency">Frequency</label>
+          <input type="text" name="frequency"/>
+        </div>
+        <div>
+          <label htmlFor="duration">Duration</label>
+          <input type="text" name="duration"/>
+        </div>
+        <div>
+          <label htmlFor="PhysicianId">Pour le médecin:</label>
+          <input type="integer" name="PhysicianId"/>
+        </div>
+        <div>
+          <label htmlFor="PatientId">Pour le patient:</label>
+          <input type="number" name="PatientId"/>
+        </div>
+        <div>
+          <label htmlFor="PharmacyId">Pour la pharmacie:</label>
+          <input type="number" name="PharmacyId"/>
+        </div>
+        <button type="number">submit</button>
+      </form>
+    </main>
     <Footer/>
     </div>
   )

@@ -1,16 +1,16 @@
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Assistance = () => {
+const Delivery = () => {
   return (
     <div>
       <Header/>
       <main>
-        <p>Assistance</p>
+        <p>Livraisons</p>
       </main>
       <Footer/>
     </div>
   )
 };
 
-export default Assistance;
+export default Delivery;

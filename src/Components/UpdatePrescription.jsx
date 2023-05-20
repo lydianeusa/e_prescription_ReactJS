@@ -69,7 +69,7 @@ const UpdatePrescription = () => {
     return (
         <>
           <Header/>
-          <>
+          <main>
             {prescription ? (
               <>
                 <h1>Mise à jour l'ordonnance :</h1>
@@ -98,7 +98,7 @@ const UpdatePrescription = () => {
             ) : (
               <p>L'ordonnance a été supprimée de la base de données.</p>
             )}
-          </>
+          </main>
           <Footer/>
       </>
     )

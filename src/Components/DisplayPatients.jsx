@@ -18,17 +18,19 @@ const DisplayPatients = ()=>{
 
     return (
         <>
-            <Header />
-            <h1>Liste des Patients</h1>
+            <Header/>
+            <main>
+                <h1>Liste des Patients</h1>
 
-            {patientsData.map((patient) => {
-                return (
-                <div key={patient.id}>
-                    <h2>{patient.first_name +" "+patient.last_name}</h2>
-                    <Link to={`/patient/${patient.id}`}>Voir le patient</Link>
-                </div>    
-                );
-            })}
+                {patientsData.map((patient) => {
+                    return (
+                    <div key={patient.id}>
+                        <h2>{patient.first_name +" "+patient.last_name}</h2>
+                        <Link to={`/patient/${patient.id}`}>Voir le patient</Link>
+                    </div>    
+                    );
+                })}
+            </main>
             <Footer/>
         </>
     )

@@ -41,8 +41,7 @@ const FindAPatient = () => {
   return (
     <>
       <Header />
-
-      <>
+      <main>
         <h1>Trouver un patient :</h1>
         <form onSubmit={handleSubmit}>
           <div>
@@ -59,7 +58,7 @@ const FindAPatient = () => {
             <p>Email: {patient.email}</p>
           </div>
         )}
-      </>
+      </main>
     </>
   );
 };

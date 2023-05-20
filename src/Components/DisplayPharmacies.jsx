@@ -19,18 +19,20 @@ const DisplayPharmacies = ()=>{
     return (
       <>
       <Header />
-      <h1>Liste des Pharmacies</h1>
+      <main>
+        <h1>Liste des Pharmacies</h1>
 
-      {pharmaciesData.map((pharmacy) => {
-        return (
-          <div key={pharmacy.id}>
-            <h2>{pharmacy.name}</h2>
-            <p>Adresse : {pharmacy.address+", "+pharmacy.zipcode+" "+pharmacy.city}</p>
-            <p>Téléphone : {pharmacy.phone_number}</p>
-            <p>Email : {pharmacy.email}</p>
-          </div>
-        );
-      })}
+        {pharmaciesData.map((pharmacy) => {
+          return (
+            <div key={pharmacy.id}>
+              <h2>{pharmacy.name}</h2>
+              <p>Adresse : {pharmacy.address+", "+pharmacy.zipcode+" "+pharmacy.city}</p>
+              <p>Téléphone : {pharmacy.phone_number}</p>
+              <p>Email : {pharmacy.email}</p>
+            </div>
+          );
+        })}
+      </main>
       <Footer/>
     </>
       )

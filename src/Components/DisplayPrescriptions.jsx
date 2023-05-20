@@ -21,19 +21,21 @@ const DisplayPrescriptions = ()=>{
     return (
         <>
           <Header />
-          <h1>Liste des ordonnances</h1>
-          {prescriptionsData.map((e) => {
-            return (
-              <div key={e.id}>
-                <h2>Ordonnance</h2>
-                <p>Médicament : {e.medicine_name}</p>
-                <p>Dosage : {e.dosage}</p>
-                <p>Fréquence: {e.frequency}</p>
-                <p>Durée: {e.duration}</p>
-                <Link to={`/prescription/${e.id}`}>Voir l'ordonnance</Link>             
-              </div>
-            );
-        })}
+          <main>
+            <h1>Liste des ordonnances</h1>
+            {prescriptionsData.map((e) => {
+              return (
+                <div key={e.id}>
+                  <h2>Ordonnance</h2>
+                  <p>Médicament : {e.medicine_name}</p>
+                  <p>Dosage : {e.dosage}</p>
+                  <p>Fréquence: {e.frequency}</p>
+                  <p>Durée: {e.duration}</p>
+                  <Link to={`/prescription/${e.id}`}>Voir l'ordonnance</Link>             
+                </div>
+              );
+          })}
+        </main>
            <Footer/>
       </>
       )

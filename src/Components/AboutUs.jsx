@@ -4,9 +4,9 @@ import Footer from "./Footer";
 
 const AboutUs = () => {
   return (
-    <div className="aboutUs">
+    <div >
       <Header/>
-      <main>
+      <main className="aboutUs">
         <h1>Qui sommes nous?</h1>
         <h2>Notre histoire</h2>
         <p>Fondée en 2023 par le Dr Doner, ce logiciel a rencontré un succès presqu’ immédiat au niveau national.

@@ -52,7 +52,7 @@ const UpdatePatient = () => {
     return (
         <>
           <Header/>
-          <>
+          <main>
             {patient ? (
               <>
                 <h1>Mise à jour du patient : {patient.last_name+" "+patient.first_name}</h1>
@@ -80,7 +80,7 @@ const UpdatePatient = () => {
             ) : (
               <p>Le patient a été supprimé de la base de données.</p>
             )}
-          </>
+          </main>
           <Footer/>
       </>
     )

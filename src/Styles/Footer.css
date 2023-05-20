@@ -1,0 +1,29 @@
+footer {
+  background-color: #0e3958;
+  color: white;
+}
+
+footer div {
+  padding: 20px 10px 5px 10px;
+}
+
+footer ul {
+  padding: 0;
+  display: block;
+}
+
+footer img {
+  height: 150px;
+}
+
+.peinturebis {
+  font-family: "Lato-Light";
+  font-size: 1.3rem;
+  border-right: 1px solid white;
+}
+
+.logo i {
+  font-size: 3rem;
+  padding: 0 1rem;
+  color: white;
+}/*# sourceMappingURL=Footer.css.map */

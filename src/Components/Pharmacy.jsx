@@ -6,13 +6,13 @@ const Pharmacy =()=>{
   return(
     <>
     <Header/>
-    <div>
+    <main>
       <ul>
         <li><Link to="/patientslist/">Lise des patients</Link></li>
         <li><Link to="/prescriptionslist">Liste des ordonnances</Link></li>
     </ul>
+    </main>
     <Footer/>
-    </div>
     </>
   )
 }
