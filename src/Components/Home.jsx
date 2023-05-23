@@ -45,7 +45,7 @@ const Home =()=>{
                 <div class="row">
                     <div class="col-12">
                         <h2>COMMENT CA MARCHE?</h2>
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/P74u1ToAT5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                        <iframe width="700" height="500" src="https://www.youtube-nocookie.com/embed/P74u1ToAT5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
                     </div>
                 </div>
             </div>
